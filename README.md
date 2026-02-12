@@ -182,7 +182,6 @@ filtered_data/
     └── pose/
 ```
 
-## Output Formats
 
 ### Caption Output
 
@@ -212,37 +211,12 @@ Dataset1,image1.npz,3,0.6521,0.7234,0.8123
 Dataset1,image2.npz,5,0.7891,0.6543,0.7890
 ```
 
-## Model Downloads
-
 ### Required Models
 
 1. **BLIP2**: [Salesforce/blip2-opt-2.7b](https://huggingface.co/Salesforce/blip2-opt-2.7b)
 2. **CLIP**: [openai/clip-vit-large-patch14](https://huggingface.co/openai/clip-vit-large-patch14)
 3. **Depth-Anything**: [LiheYoung/depth-anything-large-hf](https://huggingface.co/LiheYoung/depth-anything-large-hf)
 4. **MMPose**: [HigherHRNet checkpoint](https://download.openmmlab.com/mmpose/bottom_up/higher_hrnet48_coco_512x512.pth)
-
-## Performance Notes
-
-### Memory Requirements
-
-- Caption + CLIP: ~8GB GPU memory
-- Depth: ~4GB GPU memory
-- Pose: ~6GB GPU memory
-- All three: ~20GB GPU memory
-
-### Processing Speed
-
-Approximate processing times (single image, RTX 3090):
-- Caption generation: ~2-3 seconds
-- Depth generation: ~0.5-1 second
-- Pose detection: ~1-2 seconds
-
-### Optimization Tips
-
-1. Use multi-GPU mode for large datasets
-2. Process depth and pose together (lighter models)
-3. Process captions separately (slower generation)
-4. Enable incremental processing to skip existing files
 
 
 ## License
